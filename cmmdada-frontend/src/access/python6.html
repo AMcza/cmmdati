@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Python中装饰具有什么作用？</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      h1 {
+          color: #333;
+      }
+      .post {
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+      }
+      .post-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+      }
+      .post-author {
+          color: #666;
+      }
+      .post-date {
+          color: #666;
+      }
+      .post-body {
+          margin-bottom: 20px;
+      }
+      .post-reply {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      .post-reply button {
+          background-color: #007bff;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 5px; /* 添加圆角 */
+          transition: background-color 0.3s ease; /* 添加过渡效果 */
+      }
+      .post-reply button:hover {
+          background-color: #0056b3; /* 悬停时颜色变化 */
+      }
+      textarea {
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 5px; /* 添加圆角 */
+          resize: vertical; /* 允许垂直调整大小 */
+      }
+  </style>
+</head>
+<body>
+
+<h1>Python中装饰器的作用？</h1>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">刘菊香</span>
+    <span class="post-date">2024年10月22日 14:42</span>
+    <span class="post-views">浏览：122</span>
+  </div>
+  <div class="post-body">
+    <textarea placeholder="请输入内容"></textarea>
+  </div>
+  <div class="post-reply">
+    <button>回复</button>
+  </div>
+</div>
+
+<h2>共109条回复</h2>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">谢领</span>
+    <span class="post-date">2024年12月22日 21:30</span>
+  </div>
+  <div class="post-body">
+    在Python中，装饰器是一种强大的工具，用于修改或增强函数的行为。你可以使用装饰器来实现横切关注点（cross-cutting concerns），例如日志记录、性能测试和事务处理。一个简单的例子如下：
+    <pre><code>
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Something is happening before the function is called.")
+        result = func(*args, **kwargs)
+        print("Something is happening after the function is called.")
+        return result
+    return wrapper
+
+@my_decorator
+def say_hello(name):
+    print(f"Hello {name}")
+
+say_hello("Alice")
+    </code></pre>
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">倪丁</span>
+    <span class="post-date">2024年12月21日 10:45</span>
+  </div>
+  <div class="post-body">
+    函数式编程的一个重要概念是纯函数（pure functions）。纯函数是指在相同的输入下总是返回相同输出，并且没有副作用的函数。以下是一个纯函数的例子：
+    <pre><code>
+def add(a, b):
+    return a + b
+    </code></pre>
+    这个函数无论调用多少次，只要传入相同的参数a和b，就会返回相同的结果，并且不会对外部状态产生任何影响。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">王强</span>
+    <span class="post-date">2024年12月20日 14:15</span>
+  </div>
+  <div class="post-body">
+    高阶函数（higher-order functions）是函数式编程中的另一个关键概念。高阶函数可以接受其他函数作为参数，或者返回一个函数作为结果。Python内置了许多高阶函数，例如map、filter和reduce。下面是一个使用map函数的例子：
+    <pre><code>
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(lambda x: x**2, numbers)
+print(list(squared_numbers))  # 输出: [1, 4, 9, 16, 25]
+    </code></pre>
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">赵敏</span>
+    <span class="post-date">2024年12月19日 11:00</span>
+  </div>
+  <div class="post-body">
+    不变性（immutability）是函数式编程中的一个重要原则。不可变对象一旦创建就不能被改变。这有助于提高程序的安全性和可预测性。在Python中，元组（tuple）就是一种不可变的数据类型。下面是一个使用不可变性的例子：
+    <pre><code>
+point = (1, 2)
+# point[0] = 3  # 这会引发TypeError，因为元组是不可变的
+new_point = (point[0] + 1, point[1])  # 创建一个新的元组
+print(new_point)  # 输出: (2, 2)
+    </code></pre>
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">孙丽</span>
+    <span class="post-date">2024年12月18日 18:30</span>
+  </div>
+  <div class="post-body">
+    Python中的lambda表达式允许你创建匿名函数。这些函数通常用于需要简短函数的地方，而不需要正式定义它们。下面是一个使用lambda表达式的例子：
+    <pre><code>
+add = lambda x, y: x + y
+print(add(3, 4))  # 输出: 7
+    </code></pre>
+    Lambda表达式非常适合与高阶函数一起使用，例如map和filter：
+    <pre><code>
+numbers = [1, 2, 3, 4, 5]
+even_numbers = filter(lambda x: x % 2 == 0, numbers)
+print(list(even_numbers))  # 输出: [2, 4]
+    </code></pre>
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

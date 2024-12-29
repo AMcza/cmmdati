@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>讨论区页面</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+      }
+      .container {
+          width: 90%;
+          margin: auto;
+          overflow: hidden;
+      }
+      .post {
+          border-bottom: 1px solid #ddd;
+          padding: 20px 0;
+      }
+      .post img {
+          float: left;
+          margin-right: 20px;
+          border-radius: 50%;
+      }
+      .post-content {
+          display: flex;
+          justify-content: space-between;
+      }
+      .post-title {
+          font-weight: bold;
+      }
+      .post-info {
+          color: #666;
+      }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="search-bar">
+    <input type="text" placeholder="请输入关键字">
+    <button>发起讨论</button>
+    <label>
+      <input type="checkbox">仅显示教师参与
+    </label>
+    <select>
+      <option>筛选：全部帖子</option>
+    </select>
+  </div>
+  <div class="posts">
+    <div class="post">
+      <img src="1.jpg" alt="Profile Picture" width="50">
+      <div class="post-content">
+        <div>
+          <span class="post-title">Python函数式编程</span>
+          <p>什么是装饰器，如何使用它们？</p>
+          <span class="post-info">刘菊香</span>
+        </div>
+        <div>
+          <span class="post-info">56 回复</span>
+          <span class="post-info">85 浏览</span>
+          <span class="post-info">最后更新：2024-12-22 15:20</span>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="1.jpg" alt="Profile Picture" width="50">
+      <div class="post-content">
+        <div>
+          <span class="post-title">Python异常处理</span>
+          <p>try-except语句的最佳实践是什么？</p>
+          <span class="post-info">刘菊香</span>
+        </div>
+        <div>
+          <span class="post-info">45 回复</span>
+          <span class="post-info">67 浏览</span>
+          <span class="post-info">最后更新：2024-12-21 14:15</span>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="1.jpg" alt="Profile Picture" width="50">
+      <div class="post-content">
+        <div>
+          <span class="post-title">Python并发编程</span>
+          <p>如何使用threading模块实现多线程？</p>
+          <span class="post-info">刘菊香</span>
+        </div>
+        <div>
+          <span class="post-info">38 回复</span>
+          <span class="post-info">72 浏览</span>
+          <span class="post-info">最后更新：2024-12-20 11:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="1.jpg" alt="Profile Picture" width="50">
+      <div class="post-content">
+        <div>
+          <span class="post-title">Python数据结构</span>
+          <p>栈和队列的区别是什么？</p>
+          <span class="post-info">刘菊香</span>
+        </div>
+        <div>
+          <span class="post-info">52 回复</span>
+          <span class="post-info">98 浏览</span>
+          <span class="post-info">最后更新：2024-12-19 18:30</span>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <img src="1.jpg" alt="Profile Picture" width="50">
+      <div class="post-content">
+        <div>
+          <span class="post-title">Python文件操作</span>
+          <p>如何读取大文件而不占用大量内存？</p>
+          <span class="post-info">刘菊香</span>
+        </div>
+        <div>
+          <span class="post-info">63 回复</span>
+          <span class="post-info">110 浏览</span>
+          <span class="post-info">最后更新：2024-12-18 10:45</span>
+        </div>
+      </div>
+    </div>
+    <!-- 更多帖子内容 -->
+  </div>
+</div>
+</body>
+</html>
+
+
+

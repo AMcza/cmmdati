@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>单元二</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 0;
+      }
+      .header {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+      }
+      .content {
+          display: flex;
+          margin-top: 20px;
+      }
+      .sidebar {
+          width: 250px;
+          padding: 10px;
+          background-color: #f0f0f0;
+          border-right: 1px solid #ccc;
+      }
+      .main-content {
+          flex: 1;
+          padding: 10px;
+          background-color: white;
+      }
+      .question {
+          margin-bottom: 20px;
+          border-bottom: 1px dashed #ccc;
+          padding-bottom: 10px;
+      }
+      .question-number {
+          color: #007bff;
+          font-weight: bold;
+      }
+      .options {
+          list-style-type: none;
+          padding-left: 0;
+      }
+      .option {
+          margin-bottom: 5px;
+      }
+      .teacher-comment {
+          background-color: #f0f0f0;
+          padding: 5px;
+          margin-top: 10px;
+      }
+      a {
+          text-decoration: none;
+          color: inherit;
+      }
+      a:hover {
+          text-decoration: underline;
+      }
+      ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none; /* 去掉所有ul的默认小点 */
+      }
+      p {
+          margin: 0 0 10px 0;
+      }
+      .sidebar ul li {
+          margin: 5px 0;
+      }
+      .sidebar ul li a {
+          display: block;
+          padding: 8px 12px;
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          transition: background-color 0.3s, border-color 0.3s;
+      }
+      .sidebar ul li a:hover {
+          background-color: #e0e0e0;
+          border-color: #aaa;
+      }
+      .fill-in-the-blank {
+          margin-bottom: 10px;
+      }
+      .blank {
+          display: inline-block;
+          width: 100px;
+          height: 20px;
+          border: 1px solid #ccc;
+          vertical-align: middle;
+          margin: 0 5px;
+      }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>单元二</h1>
+  <span>[ 提交时间：2024-12-06 08:57:42 ]</span>
+  <span style="float: right;"></span>
+</div>
+<div class="content">
+  <div class="sidebar">
+    <p><strong>试卷结构</strong></p>
+    <p>满分：100 分</p>
+    <p><strong>一、单选题 (共5题，50.00分)</strong></p>
+    <ul>
+      <li><a href="#q1">1</a></li>
+      <li><a href="#q2">2</a></li>
+      <li><a href="#q3">3</a></li>
+      <li><a href="#q4">4</a></li>
+      <li><a href="#q5">5</a></li>
+    </ul>
+    <p><strong>二、判断题 (共5题，50.00分)</strong></p>
+    <ul>
+      <li><a href="#q6">1</a></li>
+      <li><a href="#q7">2</a></li>
+      <li><a href="#q8">3</a></li>
+      <li><a href="#q9">4</a></li>
+      <li><a href="#q10">5</a></li>
+    </ul>
+    <p><strong>三、编程题 (共2题，100.00分)</strong></p>
+    <ul>
+      <li><a href="#q11">1</a></li>
+      <li><a href="#q12">2</a></li>
+    </ul>
+    <p><strong>颜色说明：</strong></p>
+    <ul>
+      <li>绿色表示答对题目</li>
+      <li>橙色表示答错题目</li>
+      <li>灰色表示主观/未完成题目/未批改</li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="question" id="q1">
+      <p><span class="question-number">1.</span> 在Python中，以下哪个关键字用于定义类?</p>
+      <ul class="options">
+        <li class="option">A. class</li>
+        <li class="option">B. define</li>
+        <li class="option">C. def</li>
+        <li class="option">D. function</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q2">
+      <p><span class="question-number">2.</span> 下列哪种数据结构最适合存储键值对?</p>
+      <ul class="options">
+        <li class="option">A. 列表</li>
+        <li class="option">B. 元组</li>
+        <li class="option">C. 字典</li>
+        <li class="option">D. 集合</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q3">
+      <p><span class="question-number">3.</span> Python中的哪个函数用于打开文件?</p>
+      <ul class="options">
+        <li class="option">A. open()</li>
+        <li class="option">B. file()</li>
+        <li class="option">C. readfile()</li>
+        <li class="option">D. writefile()</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q4">
+      <p><span class="question-number">4.</span> 以下哪个选项是正确的异常处理语句?</p>
+      <ul class="options">
+        <li class="option">A. try...catch...</li>
+        <li class="option">B. try...except...</li>
+        <li class="option">C. try...finally...</li>
+        <li class="option">D. try...else...</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q5">
+      <p><span class="question-number">5.</span> 在Python中，如何导入整个模块?</p>
+      <ul class="options">
+        <li class="option">A. import module_name</li>
+        <li class="option">B. from module_name import *</li>
+        <li class="option">C. include module_name</li>
+        <li class="option">D. require module_name</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q6">
+      <p><span class="question-number">6.</span> Python中的列表是不可变的数据类型。</p>
+      <ul class="options">
+        <li class="option">正确</li>
+        <li class="option">错误</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q7">
+      <p><span class="question-number">7.</span> Python支持多线程编程。</p>
+      <ul class="options">
+        <li class="option">正确</li>
+        <li class="option">错误</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q8">
+      <p><span class="question-number">8.</span> Python中的字典是有序的集合。</p>
+      <ul class="options">
+        <li class="option">正确</li>
+        <li class="option">错误</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q9">
+      <p><span class="question-number">9.</span> Python中的元组可以修改其内容。</p>
+      <ul class="options">
+        <li class="option">正确</li>
+        <li class="option">错误</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q10">
+      <p><span class="question-number">10.</span> Python中的try-except块可以捕获所有类型的异常。</p>
+      <ul class="options">
+        <li class="option">正确</li>
+        <li class="option">错误</li>
+      </ul>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q11">
+      <p><span class="question-number">11.</span> 编写一个Python函数来反转给定字符串。</p>
+      <pre>
+def reverse_string(s):
+    return s[::-1]
+
+# 示例调用
+input_string = "hello"
+print(reverse_string(input_string))  # 输出应为 ____
+      </pre>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+    <div class="question" id="q12">
+      <p><span class="question-number">12.</span> 实现一个简单的Python函数，该函数接受一个整数列表并返回其中的最大值。</p>
+      <pre>
+def find_max(numbers):
+    max_value = numbers[0]
+    for number in numbers:
+        if number > max_value:
+            max_value = number
+    return max_value
+
+# 示例调用
+numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+print(find_max(numbers))  # 输出应为 ____
+      </pre>
+      <div class="teacher-comment">
+        <p><strong>教师评语：</strong> 暂无</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+

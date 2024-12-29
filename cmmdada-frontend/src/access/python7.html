@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Python基本数据类型讨论</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      h1 {
+          color: #333;
+      }
+      .post {
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+      }
+      .post-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+      }
+      .post-author {
+          color: #666;
+      }
+      .post-date {
+          color: #666;
+      }
+      .post-body {
+          margin-bottom: 20px;
+      }
+      .post-reply {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+      .post-reply button {
+          background-color: #007bff;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 5px; /* 添加圆角 */
+          transition: background-color 0.3s ease; /* 添加过渡效果 */
+      }
+      .post-reply button:hover {
+          background-color: #0056b3; /* 悬停时颜色变化 */
+      }
+      textarea {
+          width: 100%;
+          padding: 10px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 5px; /* 添加圆角 */
+          resize: vertical; /* 允许垂直调整大小 */
+      }
+  </style>
+</head>
+<body>
+
+<h1>Python基本数据类型讨论问题</h1>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">刘菊香</span>
+    <span class="post-date">2024年10月25日 15:22</span>
+    <span class="post-views">浏览：154</span>
+  </div>
+  <div class="post-body">
+    <textarea placeholder="请输入内容"></textarea>
+  </div>
+  <div class="post-reply">
+    <button>回复</button>
+  </div>
+</div>
+
+<h2>共75条回复</h2>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">谢领</span>
+    <span class="post-date">2024年12月22日 21:30</span>
+  </div>
+  <div class="post-body">
+    Python的基本数据类型包括整数（int）、浮点数（float）、布尔值（bool）和字符串（str）。这些数据类型是不可变的，意味着一旦创建就不能更改其内容。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">倪丁</span>
+    <span class="post-date">2024年12月21日 10:45</span>
+  </div>
+  <div class="post-body">
+    整数（int）是用于表示整数值的数据类型。例如：
+    <pre><code>
+x = 10
+y = -5
+z = 123456789012345678901234567890
+    </code></pre>
+    Python中的整数可以非常大，不受固定位数的限制。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">王强</span>
+    <span class="post-date">2024年12月20日 14:15</span>
+  </div>
+  <div class="post-body">
+    浮点数（float）用于表示小数值。例如：
+    <pre><code>
+a = 3.14
+b = -0.001
+c = 1.2e10
+    </code></pre>
+    浮点数在计算机中以二进制形式存储，可能会有一些精度误差。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">赵敏</span>
+    <span class="post-date">2024年12月19日 11:00</span>
+  </div>
+  <div class="post-body">
+    布尔值（bool）只有两个可能的值：True和False。它们通常用于条件判断。例如：
+    <pre><code>
+is_valid = True
+has_error = False
+if is_valid:
+    print("The operation is valid.")
+else:
+    print("The operation has an error.")
+    </code></pre>
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">孙丽</span>
+    <span class="post-date">2024年12月18日 18:30</span>
+  </div>
+  <div class="post-body">
+    字符串（str）用于表示文本数据。字符串可以用单引号、双引号或三引号括起来。例如：
+    <pre><code>
+greeting = 'Hello, World!'
+message = "Welcome to Python."
+multiline_text = """This is a string that spans
+multiple lines."""
+    </code></pre>
+    字符串是不可变的，但可以通过切片等方式获取子字符串。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+<div class="post">
+  <div class="post-header">
+    <span class="post-author">周杰</span>
+    <span class="post-date">2024年12月17日 15:30</span>
+  </div>
+  <div class="post-body">
+    此外，Python还提供了其他一些重要的内置数据类型，如列表（list）、元组（tuple）、集合（set）和字典（dict）。这些数据类型是可变的，并且可以包含多种不同类型的数据。例如：
+    <pre><code>
+my_list = [1, 2, 3, 4, 5]
+my_tuple = (1, 2, 3, 4, 5)
+my_set = {1, 2, 3, 4, 5}
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+    </code></pre>
+    列表是最常用的数据结构之一，支持动态增删元素；元组与列表类似，但不可变；集合用于存储唯一的元素；字典则用于存储键值对。
+  </div>
+  <div class="post-reply">
+    <button>点赞</button>
+    <button>回复</button>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
