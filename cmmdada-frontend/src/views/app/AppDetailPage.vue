@@ -38,7 +38,7 @@
               <a-button type="primary" :href="`/answer/do/${id}`"
                 >开始答题</a-button
               >
-              <a-button>分享应用</a-button>
+              <a-button @click="doShare">分享应用</a-button>
               <a-button :href="`/add/question/${id}`" v-if="isMy"
                 >设置题目</a-button
               >
@@ -54,6 +54,11 @@
         </a-col>
       </a-row>
     </a-card>
+    <ShareModel
+      :link="shareLink"
+      title="应用分享"
+      ref="shareModelRef"
+    ></ShareModel>
   </div>
 </template>
 <script lang="ts" setup>
@@ -68,6 +73,7 @@ import {
   APP_TYPE_MAP,
 } from "../../constant/app";
 import { useLoginUserStore } from "@/store/userStore";
+import ShareModel from "@/components/ShareModel.vue";
 interface Props {
   id: string;
 }
@@ -100,13 +106,22 @@ const loadData = async () => {
 watchEffect(() => {
   loadData();
 });
-
+const shareModelRef = ref();
+//分享弹窗
+const shareLink = `${window.location.protocol}//${window.location.host}/app/detail/${props.id}`;
 //获取登录用户
 const loginUserStore = useLoginUserStore();
 let loginUserId = loginUserStore.loginUser.id;
 const isMy = computed(() => {
   return loginUserId && loginUserId === data.value.userId;
 });
+const doShare = (e: Event) => {
+  if (shareModelRef.value) {
+    shareModelRef.value.openModal();
+  }
+  //阻止冒泡
+  e.stopPropagation();
+};
 </script>
 <style scoped>
 #appdetailpage {

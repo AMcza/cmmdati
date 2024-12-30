@@ -153,4 +153,12 @@ export const routes: Array<RouteRecordRaw> = [
       access: ACCESS_ENUM.USER,
     },
   },
+  {
+    name: "应用统计",
+    path: "/app_statistic",
+    component: import("@/views/statistic/AppStatisticPage.vue"),
+    meta: {
+      access: ACCESS_ENUM.ADMIN,
+    },
+  },
 ];

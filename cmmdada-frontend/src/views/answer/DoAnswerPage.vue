@@ -52,7 +52,10 @@ import message from "@arco-design/web-vue/es/message";
 import { listQuestionVoByPageUsingPost } from "@/api/questionController";
 import { useRouter } from "vue-router";
 import { getAppVoByIdUsingGet } from "@/api/appController";
-import { addUserAnswerUsingPost } from "@/api/userAnswerController";
+import {
+  addUserAnswerUsingPost,
+  generateUserAnswerIdUsingGet,
+} from "@/api/userAnswerController";
 
 interface Props {
   appId: string;
@@ -129,6 +132,15 @@ watchEffect(() => {
 const doRadioChange = (value: string) => {
   answerList[current.value - 1] = value;
 };
+const id = ref<number>();
+const generateId = async () => {
+  const res = await generateUserAnswerIdUsingGet();
+  if (res.data.code === 0) {
+    app.value = res.data.data as any;
+  } else {
+    message.error("获取id失败", res.data.message);
+  }
+};
 const doSubmit = async () => {
   if (!props.appId || !answerList) {
     return;
@@ -137,17 +149,22 @@ const doSubmit = async () => {
   const res = await addUserAnswerUsingPost({
     appId: props.appId as any,
     choices: answerList,
+    id: id.value as any,
   });
   if (res.data.code === 0 && res.data.data) {
     message.success("提交成功,正在跳转结果页");
     setTimeout(() => {
       router.push(`/answer/result/${res.data.data}`);
-    }, 3000);
+    }, 300);
   } else {
     message.error("提交失败" + res.data.message);
   }
   submitting.value = false;
 };
+//进入页面的时候，生成唯一id
+watchEffect(() => {
+  generateId();
+});
 </script>
 
 <style scoped></style>
